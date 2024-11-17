@@ -1,0 +1,56 @@
+#container {
+    display: block;
+    margin-top: 1vw;
+    height: 100vh;
+}
+
+#chessboard {
+    display: grid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    grid-template-columns: repeat(8, 1fr); 
+    grid-template-rows: repeat(8, 1fr);    
+    transform: translate(-50%, -50%);
+    width: 90vmin; 
+    height: 90vmin;
+    border: .2vmin solid #000;
+}
+
+.square2, .square1 {
+    display: grid;
+    place-items: center; 
+    background-color: #c1946a;
+    border: .2vmin solid black;
+    place-items: center; 
+    font-size: 5vmin;
+    font-weight: bold;
+}
+
+.square1 {
+    background-color: #c4b7a6;
+
+}
+
+.square1 span {
+  animation: knightMove 10s ease-in-out forwards;
+}
+
+
+@keyframes knightMove {
+  0% {
+      transform: translate(0, 0); 
+  }
+  25% {
+      transform: translate(111.25%, 222.5%); 
+  }
+  50% {
+      transform: translate(300%, 200%);
+  }
+  75% {
+      transform: translate(333.75%, 222.5%); 
+  }
+  90% {
+      transform: translate(445%, 333.75%); 
+  }
+}
